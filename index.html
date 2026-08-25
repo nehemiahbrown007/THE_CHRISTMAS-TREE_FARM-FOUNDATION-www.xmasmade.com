@@ -3,215 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Christmas Tree Farm Foundation | Heritage, Innovation &amp; Circular Silviculture</title>
+    <title>The Christmas Tree Farm Foundation | Joy, Heritage &amp; 3D Living Silviculture</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --forest-green: #0F2D1F;
-            --deep-green: #071911;
-            --rich-gold: #D4AF37;
-            --light-gold: #F3E5AB;
-            --accent-red: #8B0000;
-            --snow-white: #FCFDFD;
+            --emerald-vibrant: #059669;
+            --forest-deep: #031c13;
+            --gold-glow: #F59E0B;
+            --crimson-holiday: #DC2626;
+            --warm-cream: #FFFDF9;
         }
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--deep-green);
-            color: var(--snow-white);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at 50% 10%, #062e20 0%, #03140e 65%, #010a07 100%);
+            color: #F8FAFC;
+            overflow-x: hidden;
         }
         h1, h2, h3, h4, .font-serif {
             font-family: 'Cinzel', serif;
         }
-        .hero-home {
-            background: linear-gradient(180deg, rgba(7, 25, 17, 0.90) 0%, rgba(15, 45, 31, 0.88) 100%), 
-                        url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&q=80');
+        /* 3D Depth Utilities */
+        .card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.7), 0 0 20px rgba(245, 158, 11, 0.08), inset 0 1px 1px rgba(255,255,255,0.12);
+        }
+        .card-3d:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.9), 0 0 30px rgba(245, 158, 11, 0.28), inset 0 1px 2px rgba(255,255,255,0.25);
+        }
+        .btn-3d-gold {
+            background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #B45309 100%);
+            box-shadow: 0 4px 0 #78350F, 0 8px 20px rgba(245, 158, 11, 0.4);
+            transition: all 0.15s ease-in-out;
+        }
+        .btn-3d-gold:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #78350F, 0 4px 10px rgba(245, 158, 11, 0.4);
+        }
+        .btn-3d-crimson {
+            background: linear-gradient(135deg, #F87171 0%, #DC2626 50%, #991B1B 100%);
+            box-shadow: 0 4px 0 #7F1D1D, 0 8px 20px rgba(220, 38, 38, 0.4);
+            transition: all 0.15s ease-in-out;
+        }
+        .btn-3d-crimson:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #7F1D1D, 0 4px 10px rgba(220, 38, 38, 0.4);
+        }
+        .glow-aura {
+            filter: drop-shadow(0 0 35px rgba(245, 158, 11, 0.35));
+        }
+        .hero-pattern {
+            background: linear-gradient(180deg, rgba(3, 20, 14, 0.85) 0%, rgba(3, 20, 14, 0.95) 100%), 
+                        url('https://images.unsplash.com/photo-1543257580-7269da773bf5?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
         }
-        .gold-glow {
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.22);
+        /* Floating Animation */
+        @keyframes float-soft {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(1deg); }
         }
-        .gold-border-glow {
-            border-color: rgba(212, 175, 55, 0.5);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
-        }
-        .card-hover:hover {
-            transform: translateY(-6px);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        .animate-float {
+            animation: float-soft 5s ease-in-out infinite;
         }
     </style>
 </head>
-<body class="selection:bg-amber-600 selection:text-white">
+<body class="selection:bg-amber-500 selection:text-stone-950">
 
-    <!-- TOP ANNOUNCEMENT BANNER -->
-    <div class="bg-gradient-to-r from-red-950 via-emerald-950 to-red-950 text-amber-200 text-center py-2 px-4 text-xs font-semibold uppercase tracking-widest border-b border-amber-500/30 flex items-center justify-center gap-2">
-        <i class="fa-solid fa-tree text-emerald-400"></i>
-        <span>100% Zero-Landfill Closed-Loop Conifer Network &bull; 10 Years Cultivation For 1 Month Celebration</span>
-        <i class="fa-solid fa-tree text-emerald-400"></i>
+    <!-- TOP VIBRANT TICKER -->
+    <div class="bg-gradient-to-r from-red-900 via-emerald-800 to-amber-700 text-amber-100 text-center py-2.5 px-4 text-xs font-bold uppercase tracking-widest border-b border-amber-400/40 shadow-lg flex items-center justify-center gap-3">
+        <span>✨ 🎄 10 Years in the Living Soil &bull; 30 Days in Your Living Room &bull; Forever in Nature's Cycle 🌟 🎁</span>
     </div>
 
-    <!-- MAIN NAVIGATION -->
-    <header class="bg-[#071911]/95 backdrop-blur-md sticky top-0 z-50 border-b border-amber-500/20">
+    <!-- MAIN HEADER -->
+    <header class="bg-[#03150e]/95 backdrop-blur-xl sticky top-0 z-50 border-b border-amber-500/20 shadow-2xl">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3 group">
-                <img src="The_Christmas_Tree_Foundation-logo.png" alt="The Christmas Tree Farm Foundation Logo" class="h-12 md:h-14 w-auto drop-shadow">
+                <img src="The_Christmas_Tree_Foundation-logo.png" alt="The Christmas Tree Farm Foundation Logo" class="h-12 md:h-14 w-auto glow-aura">
                 <div>
                     <span class="block font-serif text-sm md:text-base tracking-wider text-amber-200 font-bold group-hover:text-amber-300 transition">THE CHRISTMAS TREE FARM FOUNDATION</span>
-                    <span class="block text-[9px] tracking-widest uppercase text-emerald-300 font-semibold">Agricultural Stewardship &bull; Circular Innovation</span>
+                    <span class="block text-[9px] tracking-widest uppercase text-emerald-400 font-extrabold">🌱 Living Heritage &bull; Circular Future ✨</span>
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
-            <ul class="hidden xl:flex space-x-7 text-xs font-semibold uppercase tracking-widest text-zinc-300">
+            <!-- Desktop Links -->
+            <ul class="hidden xl:flex space-x-6 text-xs font-bold uppercase tracking-widest text-zinc-300">
                 <li><a href="about-mission.html" class="hover:text-amber-300 transition-colors">Our Mission</a></li>
-                <li><a href="our-farmers.html" class="hover:text-amber-300 transition-colors">Meet The Farmers</a></li>
-                <li><a href="documentary-fund.html" class="hover:text-amber-300 transition-colors">Documentary Fund</a></li>
-                <li><a href="subscriptions-10year.html" class="hover:text-amber-300 transition-colors">10-Year Plan</a></li>
-                <li><a href="recycling-park.html" class="hover:text-amber-300 transition-colors">The Recycle Park</a></li>
-                <li><a href="evergreen-audit.html" class="hover:text-amber-300 transition-colors">Certification</a></li>
-                <li><a href="digital-vault.html" class="hover:text-amber-300 transition-colors">Digital Vault</a></li>
+                <li><a href="our-farmers.html" class="hover:text-amber-300 transition-colors">Meet Farmers 👨‍🌾</a></li>
+                <li><a href="documentary-fund.html" class="hover:text-amber-300 transition-colors">Film Fund 🎬</a></li>
+                <li><a href="subscriptions-10year.html" class="hover:text-amber-300 transition-colors">10-Year Plan 📅</a></li>
+                <li><a href="recycling-park.html" class="hover:text-amber-300 transition-colors">Recycle Park ♻️</a></li>
+                <li><a href="evergreen-audit.html" class="hover:text-amber-300 transition-colors">Evergreen Seal™ 🛡️</a></li>
+                <li><a href="digital-vault.html" class="hover:text-amber-300 transition-colors">Vault ⚡</a></li>
             </ul>
 
             <div class="flex items-center space-x-4">
-                <a href="donor-impact.html" class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-stone-950 font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-widest hover:brightness-110 transition shadow-lg flex items-center gap-2">
-                    <i class="fa-solid fa-heart text-red-950"></i>
-                    <span>Support Growers</span>
+                <a href="donor-impact.html" class="btn-3d-gold text-stone-950 font-black px-6 py-2.5 rounded-full text-xs uppercase tracking-widest flex items-center gap-2">
+                    <span>❤️ Support Soil Grants</span>
                 </a>
             </div>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero-home min-h-[85vh] flex items-center justify-center text-center px-6 py-24 border-b border-amber-500/30 relative">
-        <div class="max-w-5xl mx-auto flex flex-col items-center">
+    <!-- HERO SECTION: 3D DEPTH & EMOTIVE PSYCHOLOGY -->
+    <section class="hero-pattern min-h-[90vh] flex items-center justify-center text-center px-6 py-20 relative border-b border-amber-500/30 overflow-hidden">
+        
+        <!-- Ambient Light Flares -->
+        <div class="absolute top-10 left-1/4 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto flex flex-col items-center relative z-10">
             
-            <div class="inline-flex items-center gap-2 border border-amber-400/60 bg-black/50 backdrop-blur-md px-6 py-2 rounded-full mb-8 gold-glow">
-                <i class="fa-solid fa-star text-amber-400 text-xs"></i>
-                <span class="text-amber-200 text-xs uppercase tracking-widest font-bold">The Spirit of the Tree, Sustained Forever</span>
-                <i class="fa-solid fa-star text-amber-400 text-xs"></i>
+            <div class="inline-flex items-center gap-2 border border-amber-400/80 bg-black/60 backdrop-blur-md px-6 py-2 rounded-full mb-8 shadow-xl animate-float">
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-extrabold flex items-center gap-2">
+                    🌟 The Warmth of Holiday Wonder &bull; The Science of Forest Renewal 🌲
+                </span>
             </div>
 
-            <img src="The_Christmas_Tree_Foundation-logo.png" alt="The Christmas Tree Farm Foundation Emblem" class="h-28 md:h-36 w-auto mb-8 drop-shadow-2xl">
+            <img src="The_Christmas_Tree_Foundation-logo.png" alt="The Foundation Logo" class="h-32 md:h-44 w-auto mb-8 glow-aura">
 
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold text-amber-100 mb-6 leading-tight drop-shadow-2xl">
-                A Decade of Soil.<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200">A Lifetime of Wonder.</span>
+                Feel the Holiday Heartbeat.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-100 to-amber-400">
+                    Sustain the Soil Forever.
+                </span>
             </h1>
 
-            <p class="text-base sm:text-xl md:text-2xl mb-10 text-zinc-200 max-w-3xl font-light leading-relaxed">
-                Protecting independent tree farmers, pioneering circular zero-waste recycling, and powering guaranteed 10-year conifer covenants.
+            <p class="text-base sm:text-xl md:text-2xl mb-10 text-zinc-200 max-w-3xl font-normal leading-relaxed drop-shadow">
+                When you bring home a real Christmas tree, you connect with a decade of fresh air, loving soil hands, and natural scent memories. We make sure that joy never ends in a landfill.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-5 justify-center w-full max-w-xl">
-                <a href="subscriptions-10year.html" class="bg-gradient-to-r from-red-800 to-red-950 border border-amber-400/80 text-amber-100 hover:brightness-125 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest shadow-2xl transition flex items-center justify-center gap-2 group">
-                    <span>Lock In 10-Year Plan</span>
-                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                <a href="subscriptions-10year.html" class="btn-3d-crimson text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center gap-3">
+                    <span>🎄 Lock In 10-Year Holiday Promise</span>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="documentary-fund.html" class="bg-black/60 border border-emerald-500/50 text-emerald-200 hover:bg-black/80 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest shadow-xl transition flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-film text-amber-400"></i>
-                    <span>Fund The Documentary</span>
+                <a href="documentary-fund.html" class="bg-black/60 border border-emerald-400/60 text-emerald-200 hover:bg-black/80 px-8 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest shadow-xl transition flex items-center justify-center gap-2">
+                    <span>🎬 Back "10 Years for 1 Month"</span>
                 </a>
             </div>
 
-            <!-- Fast Spec Badges -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 text-xs text-zinc-300 w-full max-w-4xl border-t border-amber-500/20 pt-8">
-                <div class="flex items-center justify-center gap-2 bg-black/40 p-3 rounded-lg border border-emerald-500/20">
-                    <i class="fa-solid fa-seedling text-amber-400"></i>
-                    <span>3:1 Sapling Ratio</span>
+            <!-- 3D Stat Counters -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 w-full max-w-4xl border-t border-amber-500/30 pt-8 text-xs font-bold text-zinc-200">
+                <div class="bg-black/60 p-4 rounded-xl border border-emerald-500/30 card-3d">
+                    <span class="text-2xl block font-serif text-amber-300">3 : 1</span>
+                    <span class="text-zinc-400 text-[10px] uppercase tracking-wider">🌱 Sapling Reforestation</span>
                 </div>
-                <div class="flex items-center justify-center gap-2 bg-black/40 p-3 rounded-lg border border-emerald-500/20">
-                    <i class="fa-solid fa-recycle text-amber-400"></i>
-                    <span>0% Landfill Waste</span>
+                <div class="bg-black/60 p-4 rounded-xl border border-emerald-500/30 card-3d">
+                    <span class="text-2xl block font-serif text-amber-300">100%</span>
+                    <span class="text-zinc-400 text-[10px] uppercase tracking-wider">♻️ Landfill Diversion</span>
                 </div>
-                <div class="flex items-center justify-center gap-2 bg-black/40 p-3 rounded-lg border border-emerald-500/20">
-                    <i class="fa-solid fa-shield-halved text-amber-400"></i>
-                    <span>Living Wage Certified</span>
+                <div class="bg-black/60 p-4 rounded-xl border border-emerald-500/30 card-3d">
+                    <span class="text-2xl block font-serif text-amber-300">42+</span>
+                    <span class="text-zinc-400 text-[10px] uppercase tracking-wider">👨‍🌾 Audited Farm Co-Ops</span>
                 </div>
-                <div class="flex items-center justify-center gap-2 bg-black/40 p-3 rounded-lg border border-emerald-500/20">
-                    <i class="fa-solid fa-truck-fast text-amber-400"></i>
-                    <span>White-Glove Setup</span>
+                <div class="bg-black/60 p-4 rounded-xl border border-emerald-500/30 card-3d">
+                    <span class="text-2xl block font-serif text-amber-300">Zero</span>
+                    <span class="text-zinc-400 text-[10px] uppercase tracking-wider">✨ Toxic Chimney Smoke</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- CORPORATE & PHILANTHROPIC ALLIANCE TICKER -->
-    <div class="bg-[#05120c] py-6 border-b border-amber-500/20">
-        <div class="container mx-auto px-6 flex flex-wrap justify-around items-center gap-6 text-zinc-400 text-xs uppercase tracking-widest font-semibold">
-            <span class="hover:text-amber-300 transition flex items-center gap-2"><i class="fa-solid fa-globe text-emerald-500"></i> Global Citizen Joe LLC</span>
-            <span class="hover:text-amber-300 transition flex items-center gap-2"><i class="fa-solid fa-flask-vial text-emerald-500"></i> Clean Blue Green Corp</span>
+    <!-- ALLIANCE COALITION TICKER -->
+    <div class="bg-[#020e09] py-5 border-b border-amber-500/20">
+        <div class="container mx-auto px-6 flex flex-wrap justify-around items-center gap-6 text-zinc-400 text-xs uppercase tracking-widest font-bold">
+            <span class="hover:text-amber-300 transition flex items-center gap-2"><i class="fa-solid fa-earth-americas text-emerald-400"></i> Global Citizen Joe LLC</span>
+            <span class="hover:text-amber-300 transition flex items-center gap-2"><i class="fa-solid fa-flask-vial text-emerald-400"></i> Clean Blue Green Corp</span>
             <span class="hover:text-amber-300 transition flex items-center gap-2"><i class="fa-solid fa-tree text-amber-400"></i> Xmas Made Inc.</span>
             <span class="hover:text-amber-300 transition flex items-center gap-2"><i class="fa-solid fa-hand-holding-heart text-red-400"></i> Koinonia Grace Foundation</span>
         </div>
     </div>
 
-    <!-- 3 CORE PILLARS OF ACTION -->
-    <section class="py-24 bg-[#0a1f16] border-b border-amber-500/20">
+    <!-- 3D PILLARS: JOY, WELL-BEING & REGENERATION -->
+    <section class="py-24 bg-[#041a12] border-b border-amber-500/20">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="text-amber-400 text-xs uppercase tracking-widest font-bold">Foundation Mandate</span>
-                <h2 class="text-3xl md:text-5xl font-bold text-zinc-100 mt-2">The Three Pillars of Stewardship</h2>
-                <div class="w-24 h-0.5 bg-amber-500 mx-auto mt-4"></div>
+                <span class="text-amber-400 text-xs uppercase tracking-widest font-black">Our Three-Fold Covenant</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-zinc-100 mt-2">Where Holiday Joy Meets Living Science</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-emerald-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 
-                <!-- Pillar 1 -->
-                <div class="bg-gradient-to-b from-stone-900 to-green-950/80 p-8 rounded-2xl border border-emerald-500/30 card-hover flex flex-col justify-between">
+                <!-- Pillar 1: Farmers -->
+                <div class="bg-gradient-to-b from-stone-900 to-[#062419] p-8 rounded-3xl border border-emerald-500/40 card-3d flex flex-col justify-between">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-2xl mb-6 shadow">
-                            <i class="fa-solid fa-people-roof"></i>
+                        <div class="w-16 h-16 rounded-2xl bg-emerald-950 border-2 border-emerald-400 flex items-center justify-center text-emerald-300 text-3xl mb-6 shadow-xl">
+                            👨‍🌾
                         </div>
-                        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">Pillar 01</span>
-                        <h3 class="text-xl font-bold text-emerald-200 mb-3 font-serif">Farmer Well-Being &amp; Grants</h3>
+                        <span class="text-amber-400 text-xs font-black uppercase tracking-wider block mb-1">Pillar 01 &bull; Human Dignity</span>
+                        <h3 class="text-2xl font-bold text-amber-100 mb-3 font-serif">Support Rural Growers</h3>
                         <p class="text-zinc-300 text-xs leading-relaxed mb-6">
-                            Independent growers face 10 years of weather risks, pest challenges, and labor costs for a 30-day holiday window. We provide non-repayable soil testing grants, equipment safety gear, and the "10 Years for 1 Month" historical archive.
+                            Independent conifer farmers work 3,650 days through deep freezes and drought so your family can share one unforgettable month. We fund direct health subsidies, biological soil inputs, and protective harvesting gear.
                         </p>
                     </div>
-                    <a href="our-farmers.html" class="text-xs uppercase tracking-widest font-bold text-amber-300 hover:text-amber-200 inline-flex items-center gap-2 pt-4 border-t border-zinc-800">
-                        <span>Meet Our Farmers</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <a href="our-farmers.html" class="text-xs uppercase tracking-widest font-black text-amber-300 hover:text-amber-200 inline-flex items-center gap-2 pt-4 border-t border-zinc-800">
+                        <span>Meet Our Farmers</span> <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- Pillar 2 -->
-                <div class="bg-gradient-to-b from-stone-900 to-red-950/60 p-8 rounded-2xl border border-amber-500/50 card-hover flex flex-col justify-between shadow-2xl relative gold-border-glow">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-600 to-amber-500 text-stone-950 text-[10px] uppercase font-bold tracking-widest px-4 py-1 rounded-full shadow">
-                        Flagship Service
+                <!-- Pillar 2: 10-Year Promise (Elevated 3D) -->
+                <div class="bg-gradient-to-b from-stone-900 to-[#3b0b0e] p-8 rounded-3xl border-2 border-amber-400/80 card-3d flex flex-col justify-between shadow-2xl relative">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-stone-950 text-[10px] uppercase font-black tracking-widest px-5 py-1.5 rounded-full shadow-lg">
+                        ✨ Pure Holiday Peace of Mind ✨
                     </div>
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-red-950 border border-amber-400 flex items-center justify-center text-amber-300 text-2xl mb-6 shadow">
-                            <i class="fa-solid fa-calendar-check"></i>
+                        <div class="w-16 h-16 rounded-2xl bg-red-950 border-2 border-amber-400 flex items-center justify-center text-amber-300 text-3xl mb-6 shadow-xl">
+                            🎄
                         </div>
-                        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">Pillar 02</span>
-                        <h3 class="text-xl font-bold text-amber-100 mb-3 font-serif">10-Year Holiday Covenants</h3>
-                        <p class="text-zinc-300 text-xs leading-relaxed mb-6">
-                            Eliminate holiday friction forever. Lock in a decade of premium, hand-sheared Fraser and Noble Firs delivered directly inside your home with full stand rigging and post-holiday removal via Christmas Tree Joe.
+                        <span class="text-amber-300 text-xs font-black uppercase tracking-wider block mb-1">Pillar 02 &bull; Family Covenant</span>
+                        <h3 class="text-2xl font-bold text-amber-100 mb-3 font-serif">The 10-Year Tradition</h3>
+                        <p class="text-zinc-200 text-xs leading-relaxed mb-6">
+                            Lock in a decade of holiday wonder. Your hand-sheared conifer arrives inside your living room, setup in minutes with white-glove rigging, and effortlessly retrieved in January for zero landfill waste.
                         </p>
                     </div>
-                    <a href="subscriptions-10year.html" class="text-xs uppercase tracking-widest font-bold text-amber-300 hover:text-amber-200 inline-flex items-center gap-2 pt-4 border-t border-zinc-800">
-                        <span>Explore 10-Year Suites</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <a href="subscriptions-10year.html" class="text-xs uppercase tracking-widest font-black text-amber-300 hover:text-amber-200 inline-flex items-center gap-2 pt-4 border-t border-amber-500/40">
+                        <span>Reserve Your Decade</span> <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- Pillar 3 -->
-                <div class="bg-gradient-to-b from-stone-900 to-green-950/80 p-8 rounded-2xl border border-emerald-500/30 card-hover flex flex-col justify-between">
+                <!-- Pillar 3: Circular Science -->
+                <div class="bg-gradient-to-b from-stone-900 to-[#062419] p-8 rounded-3xl border border-emerald-500/40 card-3d flex flex-col justify-between">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-2xl mb-6 shadow">
-                            <i class="fa-solid fa-recycle"></i>
+                        <div class="w-16 h-16 rounded-2xl bg-emerald-950 border-2 border-emerald-400 flex items-center justify-center text-emerald-300 text-3xl mb-6 shadow-xl">
+                            ♻️
                         </div>
-                        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">Pillar 03</span>
-                        <h3 class="text-xl font-bold text-emerald-200 mb-3 font-serif">The Recycle Park &amp; Science</h3>
+                        <span class="text-amber-400 text-xs font-black uppercase tracking-wider block mb-1">Pillar 03 &bull; Closed-Loop Ecology</span>
+                        <h3 class="text-2xl font-bold text-amber-100 mb-3 font-serif">The Recycle Park</h3>
                         <p class="text-zinc-300 text-xs leading-relaxed mb-6">
-                            No Christmas tree should rot in a methane-producing landfill or cause creosote fires in chimneys. We hydro-distill needles into non-toxic Clean Blue Green™ cleaners and compost wood fiber into organic farm fertilizer.
+                            No trees belong in a suffocating landfill! We steam-distill conifer needles into non-toxic Clean Blue Green™ botanical home cleaners and compost the wood fiber into nutrient-dense farm topsoil.
                         </p>
                     </div>
-                    <a href="recycling-park.html" class="text-xs uppercase tracking-widest font-bold text-amber-300 hover:text-amber-200 inline-flex items-center gap-2 pt-4 border-t border-zinc-800">
-                        <span>View Circular Chemistry</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <a href="recycling-park.html" class="text-xs uppercase tracking-widest font-black text-amber-300 hover:text-amber-200 inline-flex items-center gap-2 pt-4 border-t border-zinc-800">
+                        <span>Explore Circular Science</span> <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
@@ -219,139 +251,83 @@
         </div>
     </section>
 
-    <!-- AGRICULTURAL LIFECYCLE SPOTLIGHT -->
-    <section class="py-24 bg-[#071911] border-b border-amber-500/20">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                
-                <div>
-                    <span class="text-amber-400 text-xs uppercase tracking-widest font-bold">Generational Devotion</span>
-                    <h2 class="text-3xl md:text-5xl font-bold text-zinc-100 mt-2 mb-6">10 Years of Cultivation for 1 Month of Celebration</h2>
-                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">
-                        A real Christmas conifer absorbs over 1 ton of carbon dioxide per acre annually, filters regional watersheds, and provides vital wildlife habitat for a decade before arriving in your home.
-                    </p>
-                    <p class="text-zinc-300 text-sm leading-relaxed mb-8">
-                        The Christmas Tree Farm Foundation bridges the gap between consumer celebration and farmer survival. When you choose a certified evergreen or back our documentary, you directly safeguard rural agricultural heritage.
-                    </p>
-
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-emerald-900 border border-emerald-400 text-amber-300 flex items-center justify-center text-xs font-bold shrink-0">1</div>
-                            <span class="text-xs text-zinc-200"><strong>Generational Seedlings:</strong> Nurtured 3 years in seedbeds before hand-planting.</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-emerald-900 border border-emerald-400 text-amber-300 flex items-center justify-center text-xs font-bold shrink-0">2</div>
-                            <span class="text-xs text-zinc-200"><strong>Annual Hand-Shearing:</strong> 7 years of manual shaping for conical perfection.</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-emerald-900 border border-emerald-400 text-amber-300 flex items-center justify-center text-xs font-bold shrink-0">3</div>
-                            <span class="text-xs text-zinc-200"><strong>Closed-Loop Rebirth:</strong> 100% converted to organic mulch and bio-solvents.</span>
-                        </div>
-                    </div>
-
-                    <div class="mt-10 flex flex-wrap gap-4">
-                        <a href="about-mission.html" class="bg-emerald-900/60 border border-emerald-500/40 text-emerald-200 font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-widest hover:bg-emerald-800 transition">
-                            Our Full Mission
-                        </a>
-                        <a href="global-impact-map.html" class="bg-black/40 border border-amber-500/30 text-amber-300 font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-widest hover:bg-black/60 transition">
-                            Explore Active Hubs Map
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="rounded-3xl overflow-hidden border border-amber-500/40 shadow-2xl gold-glow">
-                        <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&q=80" alt="Generational Christmas Tree Farmer at Work" class="w-full h-auto object-cover">
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 bg-stone-950/95 border border-amber-500/50 p-6 rounded-2xl shadow-2xl max-w-xs hidden sm:block">
-                        <div class="flex items-center gap-3 mb-2">
-                            <i class="fa-solid fa-stamp text-amber-400 text-2xl"></i>
-                            <span class="font-serif font-bold text-amber-200 text-sm">Evergreen Seal&trade;</span>
-                        </div>
-                        <p class="text-[11px] text-zinc-300 leading-snug">Auditing 42+ partner farms across North America for living wages and non-chemical pest deterrence.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPLETE SUITE PORTAL DIRECTORY -->
-    <section class="py-24 bg-[#0a1f16] border-b border-amber-500/20">
+    <!-- 3D 12-PAGE EXPLORER MATRIX -->
+    <section class="py-24 bg-[#020e09] border-b border-amber-500/20">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-400 text-xs uppercase tracking-widest font-bold">Comprehensive Navigation</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-zinc-100 mt-2">Explore the Complete Foundation Suite</h2>
-                <div class="w-24 h-0.5 bg-amber-500 mx-auto mt-4"></div>
+                <span class="text-amber-400 text-xs uppercase tracking-widest font-black">Full Ecosystem Matrix</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-zinc-100 mt-2">Explore the Complete Network</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <a href="christmastreejoe-retail.html" class="bg-black/40 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block transition group">
-                    <i class="fa-solid fa-store text-amber-400 text-2xl mb-3 group-hover:scale-110 transition"></i>
+                <a href="christmastreejoe-retail.html" class="bg-black/50 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block card-3d group">
+                    <div class="text-3xl mb-3">🏪</div>
                     <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Retail &amp; Concierge</h3>
-                    <p class="text-zinc-400 text-xs">Direct conifer ordering and white-glove living room setups.</p>
+                    <p class="text-zinc-400 text-xs">Direct holiday orders and in-home white-glove setup.</p>
                 </a>
 
-                <a href="gift-subscriptions.html" class="bg-black/40 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block transition group">
-                    <i class="fa-solid fa-gift text-amber-400 text-2xl mb-3 group-hover:scale-110 transition"></i>
+                <a href="gift-subscriptions.html" class="bg-black/50 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block card-3d group">
+                    <div class="text-3xl mb-3">🎁</div>
                     <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Gift a Legacy</h3>
-                    <p class="text-zinc-400 text-xs">Multi-year holiday subscriptions presented in gold folio boxes.</p>
+                    <p class="text-zinc-400 text-xs">Multi-year subscriptions in gold-embossed folios.</p>
                 </a>
 
-                <a href="corporate-orders.html" class="bg-black/40 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block transition group">
-                    <i class="fa-solid fa-building text-amber-400 text-2xl mb-3 group-hover:scale-110 transition"></i>
+                <a href="corporate-orders.html" class="bg-black/50 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block card-3d group">
+                    <div class="text-3xl mb-3">🏢</div>
                     <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Corporate Suites</h3>
-                    <p class="text-zinc-400 text-xs">12–25ft lobby installations and ESG Scope 3 sustainability reports.</p>
+                    <p class="text-zinc-400 text-xs">12–25ft grand trees &amp; Scope 3 ESG audit certificates.</p>
                 </a>
 
-                <a href="logistics-delivery.html" class="bg-black/40 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block transition group">
-                    <i class="fa-solid fa-truck-ramp-box text-amber-400 text-2xl mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">White-Glove Logistics</h3>
-                    <p class="text-zinc-400 text-xs">Precision scheduling, rigging, tree hydration, and clean removal.</p>
+                <a href="logistics-delivery.html" class="bg-black/50 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block card-3d group">
+                    <div class="text-3xl mb-3">🚚</div>
+                    <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">White-Glove Service</h3>
+                    <p class="text-zinc-400 text-xs">Precision scheduling, tree hydration, and takedown.</p>
                 </a>
 
-                <a href="eco-cleaners.html" class="bg-black/40 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block transition group">
-                    <i class="fa-solid fa-spray-can-sparkles text-amber-400 text-2xl mb-3 group-hover:scale-110 transition"></i>
+                <a href="eco-cleaners.html" class="bg-black/50 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block card-3d group">
+                    <div class="text-3xl mb-3">🧼</div>
                     <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Clean Blue Green™</h3>
-                    <p class="text-zinc-400 text-xs">Non-toxic home cleaners formulated with steam-distilled conifer terpenes.</p>
+                    <p class="text-zinc-400 text-xs">Non-toxic home cleaners made with real pine terpenes.</p>
                 </a>
 
-                <a href="organic-fertilizer.html" class="bg-black/40 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block transition group">
-                    <i class="fa-solid fa-seedling text-amber-400 text-2xl mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Legacy Organic Mulch</h3>
-                    <p class="text-zinc-400 text-xs">Nitrogen-balanced conifer humus donated back to rural growers.</p>
+                <a href="organic-fertilizer.html" class="bg-black/50 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block card-3d group">
+                    <div class="text-3xl mb-3">🌱</div>
+                    <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Legacy Mulch</h3>
+                    <p class="text-zinc-400 text-xs">Biological compost returned to small family farms.</p>
                 </a>
 
-                <a href="future-innovation.html" class="bg-black/40 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block transition group">
-                    <i class="fa-solid fa-dna text-amber-400 text-2xl mb-3 group-hover:scale-110 transition"></i>
+                <a href="future-innovation.html" class="bg-black/50 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block card-3d group">
+                    <div class="text-3xl mb-3">🔬</div>
                     <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Future R&amp;D</h3>
-                    <p class="text-zinc-400 text-xs">Canopy multi-spectral sensors and bio-packaging foam research.</p>
+                    <p class="text-zinc-400 text-xs">Canopy sensor arrays &amp; conifer bio-packaging foam.</p>
                 </a>
 
-                <a href="digital-vault.html" class="bg-black/40 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block transition group">
-                    <i class="fa-solid fa-box-archive text-amber-400 text-2xl mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Digital Product Vault</h3>
-                    <p class="text-zinc-400 text-xs">Engineering CAD blueprints and agricultural manuals funding grants.</p>
+                <a href="digital-vault.html" class="bg-black/50 border border-zinc-800 hover:border-amber-400 p-6 rounded-2xl block card-3d group">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h3 class="text-base font-bold text-zinc-100 font-serif mb-1 group-hover:text-amber-200">Digital Vault</h3>
+                    <p class="text-zinc-400 text-xs">Engineering CAD schematics and grower blueprints.</p>
                 </a>
 
             </div>
         </div>
     </section>
 
-    <!-- CALL TO ACTION FOR DONATIONS -->
-    <section class="py-20 bg-gradient-to-r from-red-950 via-stone-900 to-emerald-950 text-center px-6 border-b border-amber-500/30">
+    <!-- PHILANTHROPIC INVITATION -->
+    <section class="py-20 bg-gradient-to-r from-[#2e070a] via-[#051f15] to-[#2e070a] text-center px-6 border-b border-amber-500/30">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-amber-100 font-serif mb-4">Champion Our Silviculture Future</h2>
-            <p class="text-zinc-300 text-sm leading-relaxed mb-8">
-                Your direct contribution to The Christmas Tree Farm Foundation supports small-acreage family growers, finances municipal circular drop parks, and archives the living history of conifer forestry.
+            <span class="text-amber-400 text-xs uppercase tracking-widest font-black block mb-2">Together for Generations</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-amber-100 font-serif mb-4">Be the Steward Our Forests Need</h2>
+            <p class="text-zinc-200 text-sm leading-relaxed mb-8">
+                Your direct contribution directly finances living wages for harvesters, protects multi-generational tree land, and keeps holiday evergreens in circular harmony.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="donor-impact.html" class="bg-gradient-to-r from-amber-600 to-amber-500 text-stone-950 font-bold px-10 py-4 rounded-full text-xs uppercase tracking-widest hover:brightness-110 transition shadow-2xl">
-                    Make a Tax-Deductible Pledge
+                <a href="donor-impact.html" class="btn-3d-gold text-stone-950 font-black px-10 py-4 rounded-full text-xs uppercase tracking-widest">
+                    🌟 Make a Tax-Deductible Gift
                 </a>
-                <a href="certified-partners.html" class="bg-black/50 border border-amber-400/50 text-amber-200 font-bold px-8 py-4 rounded-full text-xs uppercase tracking-widest hover:bg-black/80 transition">
-                    View Certified Registry
+                <a href="certified-partners.html" class="bg-black/60 border border-amber-400/60 text-amber-200 font-bold px-8 py-4 rounded-full text-xs uppercase tracking-widest hover:bg-black/80 transition">
+                    🛡️ View Verified Partner Registry
                 </a>
             </div>
         </div>
