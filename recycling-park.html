@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Recycle Park & Circular Solutions | The Christmas Tree Farm Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #0F2D1F;
+            --deep-green: #071911;
+            --rich-gold: #D4AF37;
+            --light-gold: #F3E5AB;
+            --snow-white: #FCFDFD;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--deep-green);
+            color: var(--snow-white);
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cinzel', serif;
+        }
+        .hero-recycle {
+            background: linear-gradient(180deg, rgba(7, 25, 17, 0.92) 0%, rgba(15, 45, 31, 0.88) 100%), 
+                        url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+        }
+    </style>
+</head>
+<body class="selection:bg-emerald-600 selection:text-white">
+
+    <!-- NAVIGATION -->
+    <header class="bg-[#071911]/95 backdrop-blur-md sticky top-0 z-50 border-b border-amber-500/20">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="The_Christmas_Tree_Foundation-logo.png" alt="The Christmas Tree Farm Foundation Logo" class="h-12 w-auto">
+                <div>
+                    <span class="block font-serif text-base tracking-wider text-amber-200 font-bold">THE CHRISTMAS TREE FARM FOUNDATION</span>
+                    <span class="block text-[9px] tracking-widest uppercase text-emerald-300">Circular Remediation &bull; Pillar 01</span>
+                </div>
+            </a>
+
+            <ul class="hidden lg:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-zinc-300">
+                <li><a href="index.html" class="hover:text-amber-300 transition-colors">Home</a></li>
+                <li><a href="about-mission.html" class="hover:text-amber-300 transition-colors">Our Mission</a></li>
+                <li><a href="recycling-park.html" class="text-amber-300 border-b border-amber-300 pb-1">The Recycle Park</a></li>
+                <li><a href="eco-cleaners.html" class="hover:text-amber-300 transition-colors">Conifer Chemistry</a></li>
+                <li><a href="organic-fertilizer.html" class="hover:text-amber-300 transition-colors">Legacy Mulch</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-4">
+                <a href="donor-impact.html" class="bg-gradient-to-r from-amber-600 to-amber-500 text-stone-950 font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-widest hover:brightness-110 transition shadow-lg">
+                    Support Drop Hubs
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-recycle min-h-[65vh] flex items-center justify-center text-center px-6 py-20 border-b border-amber-500/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block border border-amber-400/60 bg-black/40 backdrop-blur-sm px-6 py-1.5 rounded-full mb-6">
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Zero-Landfill Guarantee &bull; 100% Biomass Valorization</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-amber-100 mb-6 leading-tight drop-shadow-lg">
+                The Recycle Park
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed mb-8">
+                Transforming holiday evergreens from post-season municipal waste into regenerative bio-nutrients, clean agricultural mulch, and non-toxic botanical cleaning chemistry.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#circular-flow" class="bg-gradient-to-r from-emerald-800 to-emerald-900 border border-amber-400 text-amber-100 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:brightness-125 transition shadow-2xl">
+                    Explore The 4 Circular Paths
+                </a>
+                <a href="global-impact-map.html" class="bg-black/50 border border-emerald-500/40 text-emerald-200 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-black/70 transition">
+                    Locate Drop Hubs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENVIRONMENTAL CRISIS VS CIRCULAR SOLUTION -->
+    <section class="py-24 bg-[#0a1f16] border-b border-amber-500/20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-amber-400 text-xs uppercase tracking-widest font-bold">The Post-Holiday Problem</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-zinc-100 mt-2 mb-6">Why Conventional Disposal Fails</h2>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-4">
+                        Over 25 million real Christmas trees are harvested annually in North America alone. When discarded into standard municipal solid waste streams, decomposing conifers trapped in anaerobic landfills generate massive volumes of methane gas—a greenhouse agent 25 times more potent than carbon dioxide.
+                    </p>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                        Furthermore, burning resinous softwoods in residential indoor fireplaces creates hazardous creosote accumulation, soot smudging, and chimney fire risks. <strong>The Recycle Park</strong> engineers an audited, closed-loop alternative.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-black/40 border border-red-500/30 p-4 rounded-xl">
+                            <span class="text-2xl font-bold text-red-400 font-serif block">16 kg</span>
+                            <span class="text-[11px] text-zinc-400 uppercase tracking-wider">Methane/CO2e per Landfilled Tree</span>
+                        </div>
+                        <div class="bg-black/40 border border-emerald-500/30 p-4 rounded-xl">
+                            <span class="text-2xl font-bold text-emerald-400 font-serif block">0%</span>
+                            <span class="text-[11px] text-zinc-400 uppercase tracking-wider">Landfill Waste via The Recycle Park</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-stone-900 to-green-950/90 border border-amber-500/40 p-8 rounded-2xl shadow-2xl gold-glow">
+                    <h3 class="text-xl font-bold text-amber-100 font-serif mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-arrows-spin text-amber-400"></i> The Circular Park Mandate
+                    </h3>
+                    <ul class="space-y-4 text-xs text-zinc-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+                            <span><strong>Zero Burn in Open Flues:</strong> Halting indoor wood-burning hazards by redirecting softwood logs into industrial bio-refining.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+                            <span><strong>Terpene &amp; Needle Distillation:</strong> Extracting natural conifer solvent compounds for Clean Blue Green™ plant-safe cleaning agents.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+                            <span><strong>Generational Nitrogen Balance:</strong> Seasoning woodchips with biological inoculants so organic matter enhances soil rather than depleting nitrogen.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5"></i>
+                            <span><strong>Full Chain-of-Custody Tracking:</strong> Providing ESG documentation to corporate partners and municipalities for every metric ton diverted.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE 4 CIRCULAR STREAMS -->
+    <section id="circular-flow" class="py-24 bg-[#071911] border-b border-amber-500/20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-amber-400 text-xs uppercase tracking-widest font-bold">Biomass Repurposing Streams</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-zinc-100 mt-2">The 4 Lives of a Recycled Conifer</h2>
+                <div class="w-24 h-0.5 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Stream 1 -->
+                <div class="bg-black/40 border border-emerald-500/30 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-xl mb-4">
+                            <i class="fa-solid fa-spray-can-sparkles"></i>
+                        </div>
+                        <span class="text-amber-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Stream 01</span>
+                        <h3 class="text-lg font-bold text-amber-100 font-serif mb-2">Eco-Cleaners</h3>
+                        <p class="text-zinc-300 text-xs leading-relaxed mb-4">
+                            Steam distillation of harvested pine and fir needles extracts natural alpha-pinene solvents for non-toxic household cleaning formulas.
+                        </p>
+                    </div>
+                    <a href="eco-cleaners.html" class="text-xs uppercase tracking-widest font-bold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1">
+                        <span>View Formulas</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Stream 2 -->
+                <div class="bg-black/40 border border-emerald-500/30 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-xl mb-4">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <span class="text-amber-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Stream 02</span>
+                        <h3 class="text-lg font-bold text-amber-100 font-serif mb-2">Legacy Fertilizer</h3>
+                        <p class="text-zinc-300 text-xs leading-relaxed mb-4">
+                            Trunks and heavier branches undergo heavy mechanical chipping and biological composting to create high-carbon soil amendments for crop fields.
+                        </p>
+                    </div>
+                    <a href="organic-fertilizer.html" class="text-xs uppercase tracking-widest font-bold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1">
+                        <span>Soil Science</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Stream 3 -->
+                <div class="bg-black/40 border border-emerald-500/30 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-xl mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="text-amber-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Stream 03</span>
+                        <h3 class="text-lg font-bold text-amber-100 font-serif mb-2">Erosion Barriers</h3>
+                        <p class="text-zinc-300 text-xs leading-relaxed mb-4">
+                            Intact conifer brush matrices are deployed along vulnerable coastal sand dunes and river embankments to capture sand and mitigate tidal erosion.
+                        </p>
+                    </div>
+                    <a href="global-impact-map.html" class="text-xs uppercase tracking-widest font-bold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1">
+                        <span>Barrier Projects</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Stream 4 -->
+                <div class="bg-black/40 border border-emerald-500/30 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-xl mb-4">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <span class="text-amber-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Stream 04</span>
+                        <h3 class="text-lg font-bold text-amber-100 font-serif mb-2">Future R&amp;D</h3>
+                        <p class="text-zinc-300 text-xs leading-relaxed mb-4">
+                            Pioneering experimental bio-composites, biodegradable packaging substrates, and low-particulate compressed agricultural heating fuels.
+                        </p>
+                    </div>
+                    <a href="future-innovation.html" class="text-xs uppercase tracking-widest font-bold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1">
+                        <span>R&amp;D Pipeline</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUNICIPAL PARTNERSHIPS -->
+    <section class="py-20 bg-gradient-to-r from-stone-900 via-green-950 to-stone-900 text-center px-6">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-3xl font-bold text-amber-100 font-serif mb-4">Bring The Recycle Park to Your Municipality</h3>
+            <p class="text-zinc-300 text-sm leading-relaxed mb-8">
+                We partner directly with township councils, waste management districts, and civic foundations to establish audited drop-off hubs and turnkey circular processing depots.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact-us.html" class="bg-gradient-to-r from-amber-600 to-amber-500 text-stone-950 font-bold px-8 py-3.5 rounded-full text-xs uppercase tracking-widest hover:brightness-110 transition shadow-lg">
+                    Partner With The Foundation
+                </a>
+                <a href="evergreen-audit.html" class="bg-black/40 border border-amber-400/40 text-amber-200 font-bold px-8 py-3.5 rounded-full text-xs uppercase tracking-widest hover:bg-black/60 transition">
+                    View ESG Certification Standards
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-zinc-400 text-xs border-t border-zinc-800 py-16">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">The Foundation</h5>
+                <ul class="space-y-2">
+                    <li><a href="about-mission.html" class="hover:text-zinc-100">Our Mission</a></li>
+                    <li><a href="our-farmers.html" class="hover:text-zinc-100">Meet the Farmers</a></li>
+                    <li><a href="documentary-fund.html" class="hover:text-zinc-100">Documentary Fund</a></li>
+                    <li><a href="global-impact-map.html" class="hover:text-zinc-100">Global Impact Map</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Retail &amp; Logistics</h5>
+                <ul class="space-y-2">
+                    <li><a href="christmastreejoe-retail.html" class="hover:text-zinc-100">Retail &amp; Concierge</a></li>
+                    <li><a href="subscriptions-10year.html" class="hover:text-zinc-100">10-Year Subscriptions</a></li>
+                    <li><a href="logistics-delivery.html" class="hover:text-zinc-100">White-Glove Delivery</a></li>
+                    <li><a href="corporate-orders.html" class="hover:text-zinc-100">Corporate Suites</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Circular Science</h5>
+                <ul class="space-y-2">
+                    <li><a href="recycling-park.html" class="text-zinc-100">The Recycle Park</a></li>
+                    <li><a href="eco-cleaners.html" class="hover:text-zinc-100">Conifer Chemistry</a></li>
+                    <li><a href="organic-fertilizer.html" class="hover:text-zinc-100">Legacy Mulch</a></li>
+                    <li><a href="future-innovation.html" class="hover:text-zinc-100">R&amp;D Roadmap</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Governance</h5>
+                <ul class="space-y-2">
+                    <li><a href="evergreen-audit.html" class="hover:text-zinc-100">Evergreen Seal Audit</a></li>
+                    <li><a href="strict-guidelines.html" class="hover:text-zinc-100">Standard Protocols</a></li>
+                    <li><a href="terms-of-legacy.html" class="hover:text-zinc-100">Terms of Legacy</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-zinc-100">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 The Christmas Tree Farm Foundation. Operating in philanthropic alignment with community initiatives.</p>
+            <div class="flex space-x-6">
+                <a href="terms-of-legacy.html" class="hover:text-zinc-200">Terms</a>
+                <a href="privacy-policy.html" class="hover:text-zinc-200">Privacy</a>
+                <a href="contact-us.html" class="hover:text-zinc-200">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

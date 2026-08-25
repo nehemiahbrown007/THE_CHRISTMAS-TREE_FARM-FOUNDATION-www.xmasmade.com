@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Impact &amp; Field Operations Map | The Christmas Tree Farm Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #0F2D1F;
+            --deep-green: #071911;
+            --rich-gold: #D4AF37;
+            --light-gold: #F3E5AB;
+            --snow-white: #FCFDFD;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--deep-green);
+            color: var(--snow-white);
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cinzel', serif;
+        }
+        .hero-map {
+            background: linear-gradient(180deg, rgba(7, 25, 17, 0.92) 0%, rgba(15, 45, 31, 0.88) 100%), 
+                        url('https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .radar-pulse {
+            position: relative;
+        }
+        .radar-pulse::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            border: 2px solid #D4AF37;
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.8; }
+            100% { transform: scale(2.2); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="selection:bg-emerald-600 selection:text-white">
+
+    <!-- NAVIGATION -->
+    <header class="bg-[#071911]/95 backdrop-blur-md sticky top-0 z-50 border-b border-amber-500/20">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="The_Christmas_Tree_Foundation-logo.png" alt="The Christmas Tree Farm Foundation Logo" class="h-12 w-auto">
+                <div>
+                    <span class="block font-serif text-base tracking-wider text-amber-200 font-bold">THE CHRISTMAS TREE FARM FOUNDATION</span>
+                    <span class="block text-[9px] tracking-widest uppercase text-emerald-300">Global Silviculture Network</span>
+                </div>
+            </a>
+
+            <ul class="hidden lg:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-zinc-300">
+                <li><a href="index.html" class="hover:text-amber-300 transition-colors">Home</a></li>
+                <li><a href="about-mission.html" class="hover:text-amber-300 transition-colors">Our Mission</a></li>
+                <li><a href="our-farmers.html" class="hover:text-amber-300 transition-colors">Meet The Farmers</a></li>
+                <li><a href="global-impact-map.html" class="text-amber-300 border-b border-amber-300 pb-1">Global Impact</a></li>
+                <li><a href="christmastreejoe-retail.html" class="hover:text-amber-300 transition-colors">Retail &amp; Concierge</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-4">
+                <a href="donor-impact.html" class="bg-gradient-to-r from-amber-600 to-amber-500 text-stone-950 font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-widest hover:brightness-110 transition shadow-lg">
+                    Fund Expansion
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-map min-h-[60vh] flex items-center justify-center text-center px-6 py-20 border-b border-amber-500/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block border border-amber-400/60 bg-black/40 backdrop-blur-sm px-6 py-1.5 rounded-full mb-6">
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Decentralized Forestry &bull; Circular Supply Grid</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-amber-100 mb-6 leading-tight drop-shadow-lg">
+                Global Impact &amp; Operations
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
+                Tracking agricultural recovery programs, certified farm reserves, and municipal recycling drop hubs across international borders.
+            </p>
+        </div>
+    </section>
+
+    <!-- STATS OVERVIEW -->
+    <section class="py-12 bg-[#0a1f16] border-b border-amber-500/20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-black/40 border border-emerald-500/30 p-6 rounded-xl">
+                    <span class="block text-3xl md:text-4xl font-bold text-amber-300 font-serif">180K+</span>
+                    <span class="text-xs uppercase tracking-widest text-zinc-400 mt-2 block">Trees Diverted from Landfills</span>
+                </div>
+                <div class="bg-black/40 border border-emerald-500/30 p-6 rounded-xl">
+                    <span class="block text-3xl md:text-4xl font-bold text-amber-300 font-serif">42</span>
+                    <span class="text-xs uppercase tracking-widest text-zinc-400 mt-2 block">Certified Farm Co-Ops</span>
+                </div>
+                <div class="bg-black/40 border border-emerald-500/30 p-6 rounded-xl">
+                    <span class="block text-3xl md:text-4xl font-bold text-amber-300 font-serif">3:1</span>
+                    <span class="text-xs uppercase tracking-widest text-zinc-400 mt-2 block">Mandatory Reforestation Ratio</span>
+                </div>
+                <div class="bg-black/40 border border-emerald-500/30 p-6 rounded-xl">
+                    <span class="block text-3xl md:text-4xl font-bold text-amber-300 font-serif">14</span>
+                    <span class="text-xs uppercase tracking-widest text-zinc-400 mt-2 block">Municipal Recycling Parks</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE IMPACT MAP SIMULATOR -->
+    <section class="py-24 bg-[#071911] border-b border-amber-500/20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 text-xs uppercase tracking-widest font-bold">Real-Time Field Presence</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-zinc-100 mt-2">Active Operational Hubs</h2>
+                <div class="w-24 h-0.5 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Conceptual Visual Map Canvas -->
+            <div class="relative bg-gradient-to-b from-stone-900 to-green-950/80 border border-amber-500/40 rounded-2xl p-8 md:p-12 overflow-hidden shadow-2xl">
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Pacific Northwest Hub -->
+                    <div class="bg-black/50 border border-emerald-500/30 p-6 rounded-xl relative">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-3.5 h-3.5 rounded-full bg-amber-400 radar-pulse block"></span>
+                            <span class="font-serif font-bold text-amber-200 text-lg">Pacific Northwest Corridor</span>
+                        </div>
+                        <p class="text-xs text-zinc-300 leading-relaxed mb-4">
+                            Primary cultivation zone for Noble and Douglas Firs. Over 18 generational farms enrolled in non-chemical soil restoration and seasonal harvester worker safety initiatives.
+                        </p>
+                        <div class="text-[11px] text-emerald-300 font-semibold space-y-1">
+                            <div><i class="fa-solid fa-tree mr-1"></i> Active Acres: 4,200</div>
+                            <div><i class="fa-solid fa-recycle mr-1"></i> Regional Biomass Chipping: Tier 1</div>
+                        </div>
+                    </div>
+
+                    <!-- Appalachian & Blue Ridge Hub -->
+                    <div class="bg-black/50 border border-emerald-500/30 p-6 rounded-xl relative">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-3.5 h-3.5 rounded-full bg-amber-400 radar-pulse block"></span>
+                            <span class="font-serif font-bold text-amber-200 text-lg">Appalachian Highlands</span>
+                        </div>
+                        <p class="text-xs text-zinc-300 leading-relaxed mb-4">
+                            High-altitude Fraser Fir breeding reserves. Foundation grant funding supports micro-irrigation upgrades and documentation for the "10 Years for 1 Month" historical archive.
+                        </p>
+                        <div class="text-[11px] text-emerald-300 font-semibold space-y-1">
+                            <div><i class="fa-solid fa-tree mr-1"></i> Active Acres: 3,100</div>
+                            <div><i class="fa-solid fa-recycle mr-1"></i> Regional Essential Oil Distillation: Active</div>
+                        </div>
+                    </div>
+
+                    <!-- Great Lakes & Maritime Hub -->
+                    <div class="bg-black/50 border border-emerald-500/30 p-6 rounded-xl relative">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-3.5 h-3.5 rounded-full bg-amber-400 radar-pulse block"></span>
+                            <span class="font-serif font-bold text-amber-200 text-lg">Great Lakes Basin</span>
+                        </div>
+                        <p class="text-xs text-zinc-300 leading-relaxed mb-4">
+                            Pioneering cold-climate Scots Pine and Balsam Fir forestry. Integrated directly with municipal Recycle Park infrastructure for zero-waste post-holiday city collections.
+                        </p>
+                        <div class="text-[11px] text-emerald-300 font-semibold space-y-1">
+                            <div><i class="fa-solid fa-tree mr-1"></i> Active Acres: 2,650</div>
+                            <div><i class="fa-solid fa-recycle mr-1"></i> Municipal Mulch Output: 45,000 Tons</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <p class="text-xs text-zinc-400">
+                        <i class="fa-solid fa-globe mr-1 text-amber-300"></i> International expansion pipelines currently underway across Canadian and European conifer collectives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERNATIONAL SUSTAINABILITY CORRIDORS -->
+    <section class="py-24 bg-[#0a1f16] border-b border-amber-500/20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 text-xs uppercase tracking-widest font-bold">Standardized Silviculture</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-zinc-100 mt-2">How We Verify Global Operations</h2>
+                <div class="w-24 h-0.5 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black/40 p-8 rounded-xl border border-emerald-500/20 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-300 text-2xl mb-3"><i class="fa-solid fa-stamp"></i></div>
+                        <h4 class="text-lg font-bold text-amber-100 mb-2">Evergreen Seal™ Auditing</h4>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Every affiliated farm is evaluated on strict 4-pillar sustainability metrics: living wages, biological pest deterrents, certified non-clearcut harvesting, and immediate reforestation.
+                        </p>
+                    </div>
+                    <a href="evergreen-audit.html" class="text-xs uppercase tracking-widest font-bold text-emerald-400 hover:text-emerald-300 mt-6 inline-flex items-center gap-1">
+                        <span>Read Audit Framework</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="bg-black/40 p-8 rounded-xl border border-emerald-500/20 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-300 text-2xl mb-3"><i class="fa-solid fa-truck-moving"></i></div>
+                        <h4 class="text-lg font-bold text-amber-100 mb-2">Closed-Loop Logistics Tracking</h4>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Coordinating between commercial retail services like Christmas Tree Joe and local municipalities to guarantee that 100% of collected seasonal trees enter bio-refining streams.
+                        </p>
+                    </div>
+                    <a href="recycling-park.html" class="text-xs uppercase tracking-widest font-bold text-emerald-400 hover:text-emerald-300 mt-6 inline-flex items-center gap-1">
+                        <span>Explore The Recycle Park</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-zinc-400 text-xs border-t border-zinc-800 py-16">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">The Foundation</h5>
+                <ul class="space-y-2">
+                    <li><a href="about-mission.html" class="hover:text-zinc-100">Our Mission</a></li>
+                    <li><a href="our-farmers.html" class="hover:text-zinc-100">Meet the Farmers</a></li>
+                    <li><a href="documentary-fund.html" class="hover:text-zinc-100">Documentary Fund</a></li>
+                    <li><a href="global-impact-map.html" class="text-zinc-100">Global Impact Map</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Retail &amp; Logistics</h5>
+                <ul class="space-y-2">
+                    <li><a href="christmastreejoe-retail.html" class="hover:text-zinc-100">Retail &amp; Concierge</a></li>
+                    <li><a href="subscriptions-10year.html" class="hover:text-zinc-100">10-Year Subscriptions</a></li>
+                    <li><a href="logistics-delivery.html" class="hover:text-zinc-100">White-Glove Delivery</a></li>
+                    <li><a href="corporate-orders.html" class="hover:text-zinc-100">Corporate Suites</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Circular Science</h5>
+                <ul class="space-y-2">
+                    <li><a href="recycling-park.html" class="hover:text-zinc-100">The Recycle Park</a></li>
+                    <li><a href="eco-cleaners.html" class="hover:text-zinc-100">Conifer Chemistry</a></li>
+                    <li><a href="organic-fertilizer.html" class="hover:text-zinc-100">Legacy Mulch</a></li>
+                    <li><a href="future-innovation.html" class="hover:text-zinc-100">R&amp;D Roadmap</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Governance</h5>
+                <ul class="space-y-2">
+                    <li><a href="evergreen-audit.html" class="hover:text-zinc-100">Evergreen Seal Audit</a></li>
+                    <li><a href="strict-guidelines.html" class="hover:text-zinc-100">Standard Protocols</a></li>
+                    <li><a href="terms-of-legacy.html" class="hover:text-zinc-100">Terms of Legacy</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-zinc-100">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 The Christmas Tree Farm Foundation. Operating in philanthropic alignment with community initiatives.</p>
+            <div class="flex space-x-6">
+                <a href="terms-of-legacy.html" class="hover:text-zinc-200">Terms</a>
+                <a href="privacy-policy.html" class="hover:text-zinc-200">Privacy</a>
+                <a href="contact-us.html" class="hover:text-zinc-200">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
