@@ -3,211 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Our Mission & Foundation — ChristmasTreeJoe.info</title>
+    <title>Our Mission & Core Pillars | The Christmas Tree Farm Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --forest-green: #0B3B24;
-            --dark-charcoal: #051810;
-            --gold: #D4AF37;
-            --light-bg: #F4F7F5;
-            --white: #FFFFFF;
+            --forest-green: #0F2D1F;
+            --deep-green: #071911;
+            --rich-gold: #D4AF37;
+            --light-gold: #F3E5AB;
+            --snow-white: #FCFDFD;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
         body {
-            background-color: var(--light-bg);
-            color: var(--dark-charcoal);
-            line-height: 1.7;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--deep-green);
+            color: var(--snow-white);
         }
-
-        header {
-            background: linear-gradient(135deg, var(--dark-charcoal), var(--forest-green));
-            color: var(--white);
-            text-align: center;
-            padding: 5rem 1rem;
-            border-bottom: 4px solid var(--gold);
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cinzel', serif;
         }
-
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.75rem;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            color: var(--gold);
-            font-size: 1.3rem;
-            font-weight: 500;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 3.5rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .mission-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(11, 59, 36, 0.08);
-            margin-bottom: 2.5rem;
-            border-left: 6px solid var(--gold);
-        }
-
-        .mission-card h2 {
-            color: var(--forest-green);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .mission-card p {
-            font-size: 1.05rem;
-            color: #444;
-            margin-bottom: 1.25rem;
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .pillar-box {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-        }
-
-        .pillar-box h3 {
-            color: var(--forest-green);
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .pillar-box p {
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        .cta-section {
-            text-align: center;
-            background: linear-gradient(135deg, var(--forest-green), var(--dark-charcoal));
-            color: var(--white);
-            padding: 3rem;
-            border-radius: 12px;
-            margin-top: 3rem;
-            border: 2px solid var(--gold);
-        }
-
-        .cta-section h2 {
-            color: var(--gold);
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-
-        .cta-section p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--gold);
-            color: var(--dark-charcoal);
-            padding: 0.8rem 2.2rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: transform 0.2s, background-color 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-            background-color: #E6C55C;
-        }
-
-        footer {
-            background: var(--dark-charcoal);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-            border-top: 3px solid var(--gold);
-        }
-
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
+        .hero-mission {
+            background: linear-gradient(180deg, rgba(7, 25, 17, 0.90) 0%, rgba(15, 45, 31, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1513507643916-f36894709d3c?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
-<body>
+<body class="selection:bg-emerald-600 selection:text-white">
 
-    <header>
-        <h1>Our Mission & Foundation</h1>
-        <p>Anchored in community stewardship, worker well-being, and sustainable environmental impact through the Koinonia Grace Foundation.</p>
+    <!-- NAVIGATION -->
+    <header class="bg-[#071911]/95 backdrop-blur-md sticky top-0 z-50 border-b border-amber-500/20">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="The_Christmas_Tree_Foundation-logo.png" alt="The Christmas Tree Farm Foundation Logo" class="h-12 w-auto">
+                <div>
+                    <span class="block font-serif text-base tracking-wider text-amber-200 font-bold">THE CHRISTMAS TREE FARM FOUNDATION</span>
+                    <span class="block text-[9px] tracking-widest uppercase text-emerald-300">Philanthropy &amp; Sustainability</span>
+                </div>
+            </a>
+
+            <ul class="hidden lg:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-zinc-300">
+                <li><a href="index.html" class="hover:text-amber-300 transition-colors">Home</a></li>
+                <li><a href="about-mission.html" class="text-amber-300 border-b border-amber-300 pb-1">Our Mission</a></li>
+                <li><a href="our-farmers.html" class="hover:text-amber-300 transition-colors">Meet The Farmers</a></li>
+                <li><a href="recycling-park.html" class="hover:text-amber-300 transition-colors">The Recycle Park</a></li>
+                <li><a href="christmastreejoe-retail.html" class="hover:text-amber-300 transition-colors">Retail &amp; Concierge</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-4">
+                <a href="donor-impact.html" class="bg-gradient-to-r from-amber-600 to-amber-500 text-stone-950 font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-widest hover:brightness-110 transition shadow-lg">
+                    Donate Now
+                </a>
+            </div>
+        </nav>
     </header>
 
-    <div class="container">
-        
-        <!-- Main Overview Card -->
-        <div class="mission-card">
-            <h2>Rooted in Purpose: Beyond the Evergreen</h2>
-            <p>While Christmas Tree Joe redefines the modern holiday experience through effortless doorstep delivery, our core heartbeat lives on <strong>ChristmasTreeJoe.info</strong>. We believe that true luxury and convenience should never come at the expense of our agricultural workers or our environment.</p>
-            <p>Operated in alignment with the <strong>Koinonia Grace Foundation</strong> and connected through <strong>Black and Brown Laura USA</strong>, our initiative bridges commercial excellence with deep-rooted community stewardship, ensuring that every tree harvested contributes directly to the uplifting of the people and ecosystems behind the industry.</p>
+    <!-- HERO SECTION -->
+    <section class="hero-mission min-h-[60vh] flex items-center justify-center text-center px-6 py-20 border-b border-amber-500/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block border border-amber-400/60 bg-black/40 backdrop-blur-sm px-6 py-1.5 rounded-full mb-6">
+                <span class="text-amber-300 text-xs uppercase tracking-widest font-semibold">Stewardship &bull; Equity &bull; Circularity</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-amber-100 mb-6 leading-tight drop-shadow-lg">
+                Our Mission &amp; Purpose
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-light leading-relaxed">
+                Transforming the seasonal conifer ecosystem into an enduring engine for environmental renewal, agricultural dignity, and zero-landfill innovation.
+            </p>
         </div>
+    </section>
 
-        <h2 style="text-align: center; color: var(--forest-green); margin-bottom: 1.5rem; font-size: 2rem;">Our Three Core Pillars</h2>
-
-        <!-- Pillars Grid -->
-        <div class="pillars-grid">
-            
-            <div class="pillar-box">
-                <h3>🌱 The Recycle Park Initiative</h3>
-                <p>We champion full-lifecycle environmental responsibility. Through our post-holiday collection and community Recycle Park programs, we ensure that evergreens are sustainably repurposed—keeping organic waste out of municipal landfills and enriching local ecosystems.</p>
+    <!-- THE THREE CORE PILLARS -->
+    <section class="py-24 bg-[#0a1f16] border-b border-amber-500/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-amber-400 text-xs uppercase tracking-widest font-bold">Foundational Framework</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-zinc-100 mt-2">The Three Pillars of Impact</h2>
+                <div class="w-24 h-0.5 bg-amber-500 mx-auto mt-4"></div>
             </div>
 
-            <div class="pillar-box">
-                <h3>🤝 Worker & Farmer Well-Being</h3>
-                <p>The evergreen industry relies heavily on the hard work of dedicated growers, farmhands, and field laborers. We advocate for and invest in the health, safety, fair treatment, and economic security of the people who cultivate our Appalachian Fraser Firs.</p>
+            <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Pillar 1 -->
+                <div class="bg-gradient-to-b from-stone-900/90 to-green-950/80 p-8 rounded-2xl border border-emerald-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-2xl mb-6">
+                            <i class="fa-solid fa-recycle"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-emerald-200 mb-3">1. The Recycle Park</h3>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-4">Circular Environmental Solutions</p>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            Pioneering municipal and community post-holiday drop-off hubs that divert 100% of seasonal conifers from landfills into high-grade mulch, biological soil nutrients, and bio-cleaner formulations.
+                        </p>
+                    </div>
+                    <a href="recycling-park.html" class="inline-flex items-center gap-2 text-emerald-300 text-xs uppercase tracking-widest font-bold hover:text-emerald-100">
+                        <span>Learn About The Park</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-gradient-to-b from-stone-900/90 to-green-950/80 p-8 rounded-2xl border border-emerald-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-2xl mb-6">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-emerald-200 mb-3">2. Worker Well-Being</h3>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-4">Agricultural Dignity &amp; Safety</p>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            Safeguarding the multi-generational laborers and cultivators who spend ten years nurturing each tree. We provide health and safety subsidies, micro-grants for soil health, and occupational resources.
+                        </p>
+                    </div>
+                    <a href="our-farmers.html" class="inline-flex items-center gap-2 text-emerald-300 text-xs uppercase tracking-widest font-bold hover:text-emerald-100">
+                        <span>Farmer Welfare Programs</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-gradient-to-b from-stone-900/90 to-green-950/80 p-8 rounded-2xl border border-emerald-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-900/60 border border-emerald-400 flex items-center justify-center text-emerald-300 text-2xl mb-6">
+                            <i class="fa-solid fa-vault"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-emerald-200 mb-3">3. Philanthropic Giving</h3>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-amber-300 mb-4">Direct Community Initiatives</p>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            Deploying capital directly to targeted social impact initiatives, sustainable forestry education, community green spaces, and producing the "10 Years for 1 Month" historical documentary project.
+                        </p>
+                    </div>
+                    <a href="donor-impact.html" class="inline-flex items-center gap-2 text-emerald-300 text-xs uppercase tracking-widest font-bold hover:text-emerald-100">
+                        <span>View Grant Targets</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="pillar-box">
-                <h3>💝 Community Grants & Support</h3>
-                <p>Powered by the Koinonia Grace Foundation, we direct charitable contributions and grants toward targeted community programs, educational initiatives, and localized support networks for working families.</p>
+    <!-- OPERATIONAL SEPARATION STATEMENT -->
+    <section class="py-20 bg-[#071911]">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <div class="border border-amber-500/30 bg-black/40 p-10 rounded-2xl">
+                <h3 class="text-2xl font-bold text-amber-100 mb-4 font-serif">Structural &amp; Philanthropic Integrity</h3>
+                <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                    <strong>The Christmas Tree Farm Foundation</strong> operates exclusively as a mission-driven entity focused on environmental remediation, agricultural labor support, and charitable community impact. While commercial conifer retail and white-glove consumer fulfillment are managed independently through commercial enterprise partners, our platform ensures every harvested tree maintains a zero-landfill, circular destination.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="evergreen-audit.html" class="text-xs uppercase tracking-widest font-bold text-emerald-400 hover:text-emerald-300 border-b border-emerald-400 pb-1">
+                        Read Our Environmental Audit Standards &rarr;
+                    </a>
+                </div>
             </div>
-
         </div>
+    </section>
 
-        <!-- Call to Action Box -->
-        <div class="cta-section">
-            <h2>Support Our Mission</h2>
-            <p>Join us in championing sustainable agriculture, environmental renewal, and worker welfare. Your contributions directly fund our community grant targets and foundation initiatives.</p>
-            <a href="donate.html" class="btn">Make a Contribution →</a>
+    <!-- FOOTER -->
+    <footer class="bg-black text-zinc-400 text-xs border-t border-zinc-800 py-16">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">The Foundation</h5>
+                <ul class="space-y-2">
+                    <li><a href="about-mission.html" class="text-zinc-100">Our Mission</a></li>
+                    <li><a href="our-farmers.html" class="hover:text-zinc-100">Meet the Farmers</a></li>
+                    <li><a href="documentary-fund.html" class="hover:text-zinc-100">Documentary Fund</a></li>
+                    <li><a href="global-impact-map.html" class="hover:text-zinc-100">Global Impact Map</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Retail &amp; Logistics</h5>
+                <ul class="space-y-2">
+                    <li><a href="christmastreejoe-retail.html" class="hover:text-zinc-100">Retail &amp; Concierge</a></li>
+                    <li><a href="subscriptions-10year.html" class="hover:text-zinc-100">10-Year Subscriptions</a></li>
+                    <li><a href="logistics-delivery.html" class="hover:text-zinc-100">White-Glove Delivery</a></li>
+                    <li><a href="corporate-orders.html" class="hover:text-zinc-100">Corporate Suites</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Circular Science</h5>
+                <ul class="space-y-2">
+                    <li><a href="recycling-park.html" class="hover:text-zinc-100">The Recycle Park</a></li>
+                    <li><a href="eco-cleaners.html" class="hover:text-zinc-100">Conifer Chemistry</a></li>
+                    <li><a href="organic-fertilizer.html" class="hover:text-zinc-100">Legacy Mulch</a></li>
+                    <li><a href="future-innovation.html" class="hover:text-zinc-100">R&amp;D Roadmap</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-amber-300 font-bold uppercase tracking-widest mb-4">Governance</h5>
+                <ul class="space-y-2">
+                    <li><a href="evergreen-audit.html" class="hover:text-zinc-100">Evergreen Seal Audit</a></li>
+                    <li><a href="strict-guidelines.html" class="hover:text-zinc-100">Standard Protocols</a></li>
+                    <li><a href="terms-of-legacy.html" class="hover:text-zinc-100">Terms of Legacy</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-zinc-100">Privacy Policy</a></li>
+                </ul>
+            </div>
         </div>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Koinonia Grace Foundation / Black and Brown Laura USA. All Rights Reserved. <br> Hosted via <span style="color:var(--gold)">ChristmasTreeJoe.info</span></p>
+        <div class="container mx-auto px-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 The Christmas Tree Farm Foundation. Operating in philanthropic alignment with community initiatives.</p>
+            <div class="flex space-x-6">
+                <a href="terms-of-legacy.html" class="hover:text-zinc-200">Terms</a>
+                <a href="privacy-policy.html" class="hover:text-zinc-200">Privacy</a>
+                <a href="contact-us.html" class="hover:text-zinc-200">Contact</a>
+            </div>
+        </div>
     </footer>
 
 </body>
